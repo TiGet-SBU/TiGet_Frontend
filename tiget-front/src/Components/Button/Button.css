@@ -1,0 +1,12 @@
+
+.Button{
+    width: 10%;
+    height: 30px;
+    border-radius: 8px;
+    vertical-align: middle;
+    line-height: 30px;
+    background-color: var(--main-color);
+    text-align: center;
+    align-items: center;
+    color: var(--text-white-color);
+}

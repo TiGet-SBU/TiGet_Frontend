@@ -1,0 +1,32 @@
+:root{
+    --text-gray-color : #606060;
+    --main-color : #1D91CC;
+    --text-white-color : #FFFFFF;
+}
+.navbar{
+    margin-top: 20px;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.navbar__text{
+    direction: rtl;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+    width: auto;
+    text-align: center;
+    color: var(--text-gray-color);
+}
+.navbar__text span:hover{
+    color:  var(--main-color);
+    cursor: pointer;
+}
+.navbar__logo{
+    text-align: center;
+    width: auto;
+    font-weight: 700;
+    color: var(--main-color);
+}
