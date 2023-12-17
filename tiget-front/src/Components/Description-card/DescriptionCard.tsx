@@ -9,10 +9,10 @@ export const DescriptionCard : React.FC<{ ticket: Ticket}> = ({ticket}) => {
           <img src={ticket.image} alt="عکس مقصد" width="100%" height="100%" />
         </div>
         <div className='name-detail-holder'>
-          <div>
+          <div className='name'>
             {ticket.name}
           </div>
-          <div>
+          <div className='description'>
             {ticket.description}
           </div>
         </div>
