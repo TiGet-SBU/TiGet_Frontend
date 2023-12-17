@@ -10,9 +10,9 @@ import './LandingPage.css';
 
 const CreateTickets : React.FC<{ tickets: Ticket[] }> = ({tickets}) => {
   const cards = tickets.map( ticket => <DescriptionCard ticket={ticket}/>);
-  return <div>
+  return <>
     {cards}
-  </div>
+  </>
 };
 
 const LandingPage = () => {

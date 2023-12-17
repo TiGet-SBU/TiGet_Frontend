@@ -1,8 +1,29 @@
+.price-vehicle-holder
+{
+    display: flex;
+    justify-content: space-around;
+    font-size: small;
+    color: var(--text-gray-color);
+}
+.card-top
+{
+    display: flex;
+}
+.name-detail-holder
+{
+    width: 50%;
+}
+.img-holder
+{
+    width: 40%;
+}
 .card-holder
 {
+    direction: rtl;
+    border-radius: 5px;
+    padding-right: 3px;
+    margin-left: 3%;
     margin-top: 40px;
     width: 30%;
     box-shadow: 0 0 5px rgba(0,0,0,.05), 7px 7px 5px rgba(0,0,0,.1);
-
-
 }

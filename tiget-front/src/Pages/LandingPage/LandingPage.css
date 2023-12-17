@@ -13,3 +13,7 @@
     height: 12rem;
     background-color: var(--text-white-color);
 }
+.search-card-holder{
+    display: flex;
+    flex-wrap: wrap;
+}

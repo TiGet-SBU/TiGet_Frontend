@@ -4,7 +4,27 @@ import { Ticket } from '../../FakeData/fakeData';
 export const DescriptionCard : React.FC<{ ticket: Ticket}> = ({ticket}) => {
   return (
     <div className='card-holder'>
-      {ticket.name}
+      <div className='card-top'>
+        <div className='img-holder'>
+          <img src={ticket.image} alt="عکس مقصد" width="100%" height="100%" />
+        </div>
+        <div className='name-detail-holder'>
+          <div>
+            {ticket.name}
+          </div>
+          <div>
+            {ticket.description}
+          </div>
+        </div>
+      </div>
+      <div className='price-vehicle-holder'>
+        <div>
+          {ticket.Vehicle}
+        </div>
+        <div>
+          {ticket.price} تومان
+        </div>
+      </div>
     </div>
   )
 }
