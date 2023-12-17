@@ -1,6 +1,12 @@
+:root{
+  --text-gray-color : #606060;
+  --main-color : #1D91CC;
+  --main-color-hover: #6fa3bd;
+  --text-white-color : #FFFFFF;
+}
 body {
   margin: 0;
-  font-family: 'Vazirmatn', sans-serif;;
+  font-family: 'Vazirmatn', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

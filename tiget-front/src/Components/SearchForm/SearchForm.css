@@ -1,0 +1,24 @@
+form{
+    direction: rtl;
+}
+.search-form_button-holder{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.ticket-specification-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.ticket-specification-form input
+{
+    margin-top: 10%;
+    border-width: 1px;
+    border-color: var(--text-gray-color);
+    border-radius: 5px;
+    height: 40px;
+    font-family: 'Vazirmatn', sans-serif;
+    padding-right:10px ;
+}

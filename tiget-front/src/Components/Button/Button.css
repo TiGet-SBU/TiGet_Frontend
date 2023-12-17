@@ -9,3 +9,7 @@
     text-align: center;
     color: var(--text-white-color);
 }
+.Button:hover{
+    cursor: pointer;
+    background-color: var(--main-color-hover) 
+}

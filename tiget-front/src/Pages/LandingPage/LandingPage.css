@@ -1,0 +1,15 @@
+.Logo-Background{
+    margin-top: 20px;
+    margin-bottom: -100px;
+    width: auto;
+    height: 20rem;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(29,145,204,1) 100%);
+}
+.SearchForm-Container{
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 7px 7px 5px rgba(0,0,0,.1);
+    margin-left: 10%;
+    width: 80%;
+    height: 15rem;
+    background-color: var(--text-white-color);
+}
