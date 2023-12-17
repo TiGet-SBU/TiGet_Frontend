@@ -6,6 +6,11 @@ const SearchForm = () => {
     <div>
         <form>
             <div className='ticket-specification-form'>
+                <select name="Vehicle">
+                    <option value="Bus">اتوبوس</option>
+                    <option value="Train">قطار</option>
+                    <option value="Plane">هواپیما</option>
+                </select>
                 <input type='text' placeholder='مبدا'/>
                 <input type='text' placeholder='مقصد'/>
                 <input type='text' placeholder='تاریخ'/>

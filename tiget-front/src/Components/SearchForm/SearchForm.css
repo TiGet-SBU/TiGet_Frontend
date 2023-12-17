@@ -4,7 +4,7 @@ form{
 .search-form_button-holder{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .ticket-specification-form{
     display: flex;
@@ -14,11 +14,18 @@ form{
 }
 .ticket-specification-form input
 {
-    margin-top: 10%;
+    margin-top: 3%;
     border-width: 1px;
     border-color: var(--text-gray-color);
     border-radius: 5px;
     height: 40px;
     font-family: 'Vazirmatn', sans-serif;
     padding-right:10px ;
+}
+.ticket-specification-form select
+{
+    height: 44px;
+    margin-top: 3%;
+    border-radius: 5px;
+    font-family: 'Vazirmatn', sans-serif;
 }
