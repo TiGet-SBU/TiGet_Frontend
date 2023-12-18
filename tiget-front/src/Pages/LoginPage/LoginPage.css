@@ -1,0 +1,43 @@
+.title
+{
+    margin-left: 50%;
+    margin-top: 10%;
+    font-size: large;
+    font-weight: 800;
+    color: var(--main-color);
+}
+form{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.form-holder{
+    direction: rtl;
+    width: 40%;
+    height: 25rem;
+    margin-left: 30%;
+    margin-top: 0%;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-signup-toggle{
+    font-size: small;
+}
+.login-signup-toggle span:hover{
+    cursor: pointer;
+    color: var(--text-gray-color);
+}
+.form-holder input
+{
+    margin-top: 3%;
+    border-width: 1px;
+    border-color: var(--text-gray-color);
+    border-radius: 5px;
+    height: 40px;
+    font-family: 'Vazirmatn', sans-serif;
+    padding-right:10px ;
+}
