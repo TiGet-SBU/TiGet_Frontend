@@ -1,6 +1,7 @@
 import React from 'react';
 import './DescriptionCard.css';
 import { Ticket } from '../../FakeData/fakeData';
+import Button from '../Button/Button';
 export const DescriptionCard : React.FC<{ ticket: Ticket}> = ({ticket}) => {
   return (
     <div className='card-holder'>
@@ -24,6 +25,7 @@ export const DescriptionCard : React.FC<{ ticket: Ticket}> = ({ticket}) => {
         <div>
           {ticket.price} تومان
         </div>
+        <Button text='خرید' onClick={()=>true}/>
       </div>
     </div>
   )
