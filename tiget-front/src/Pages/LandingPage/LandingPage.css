@@ -18,3 +18,13 @@
     flex-wrap: wrap;
     direction: rtl;
 }
+@media only screen and (max-width: 1056px) {
+    .SearchForm-Container{
+        height: 250px;
+    }
+}
+@media only screen and (max-width : 391px) {
+    .SearchForm-Container{
+        height: 350px;
+    }
+}
