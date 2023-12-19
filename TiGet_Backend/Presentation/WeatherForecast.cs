@@ -1,4 +1,4 @@
-namespace TiGet_Backend
+namespace Presentation
 {
     public class WeatherForecast
     {

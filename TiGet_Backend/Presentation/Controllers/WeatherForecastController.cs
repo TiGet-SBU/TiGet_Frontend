@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace TiGet_Backend.Controllers
+namespace Presentation.Controllers
 {
     [ApiController]
     [Route("[controller]")]
