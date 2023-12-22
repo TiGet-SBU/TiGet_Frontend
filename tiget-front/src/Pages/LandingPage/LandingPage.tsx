@@ -23,6 +23,9 @@ const LandingPage = () => {
       <div className='SearchForm-Container'>
         <SearchForm/>
       </div>
+      <div className='search-card-tag'>
+        مقاصد پرطرفدار
+      </div>
       <div className='search-card-holder'>
         <CreateTickets tickets={fakeTickets}/>
       </div>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TiGet_Backend.props" />
+</Project>

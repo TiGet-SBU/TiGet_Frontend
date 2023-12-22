@@ -15,8 +15,16 @@
 }
 .search-card-holder{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     direction: rtl;
+}
+.search-card-tag{
+    direction: rtl;
+    margin-top: 3%;
+    margin-right: 2%;
+    color: var(--main-color);
+    font-weight: 800;
 }
 @media only screen and (max-width: 1056px) {
     .SearchForm-Container{
