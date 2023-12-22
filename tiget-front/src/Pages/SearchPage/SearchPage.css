@@ -4,11 +4,12 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
-.specification-bar-holder-sp{
+.filter-bar-holder-sp{
     width: 20%;
     direction: rtl;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,.05), 7px 7px 5px rgba(0,0,0,.1);
+    background-color: #EDEDED;
 }
 .ticket-search-form-holder-sp{
     display: flex;

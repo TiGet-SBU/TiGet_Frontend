@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchPage.css';
 import Navbar from '../../Components/Navbar/Navbar';
 import SearchForm from '../../Components/SearchForm/SearchForm';
-import SpecificationBar from '../../Components/SpecificationBar/SpecificationBar';
+import FilterBar from '../../Components/Filter-Bar/Filter-Bar';
 
 const SearchPage = () => {
   return (
@@ -14,11 +14,10 @@ const SearchPage = () => {
             <SearchForm/>
           </div>
           <div className='ticket-holder-sp'>
-            
           </div>
         </div>
-        <div className='specification-bar-holder-sp'>
-          <SpecificationBar/>
+        <div className='filter-bar-holder-sp'>
+          <FilterBar/>
         </div>
       </div>
     </>

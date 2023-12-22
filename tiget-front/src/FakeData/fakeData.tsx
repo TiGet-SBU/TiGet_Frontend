@@ -12,3 +12,17 @@ export const fakeTickets: Ticket[] = [
    {name: "شیراز", Vehicle : "هواپیما", description : "شهر شعر و ادب",image : img ,price : 1764487  },
    {name: "اصفهان", Vehicle : "قطار", description : "نصف جهان",image : img ,price : 5542378965  }
  ];
+ export const fakeAirLines: string[] = [
+   "iran air",
+   "mahan",
+   "lufthansa",
+   "Qatar Airlines",
+   "United Airlines"
+ ]
+ export const types: string[] = [
+   "مستقیم",
+   "یک",
+   "دو",
+   "بیشتر از 2",
+   "همه"
+ ]

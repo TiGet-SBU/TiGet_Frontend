@@ -1,0 +1,39 @@
+.price-input-range{
+    margin-top: 10%;
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+}
+.line{
+    margin-right: 5%;
+    width: 90%;
+    margin-top: 10%;
+    height: 2px;
+    background-color: #e3e3e3;
+}
+.time-input-range{
+    margin-top: 10%;
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+}
+.input-name{
+    color: var(--text-gray-color);
+    margin-right: 10%;
+    margin-top: 10%;
+    font-size: large;
+}
+.company-input-checkbox{
+    color: var(--text-gray-color);
+    margin-right: 10%;
+}
+.company-input-checkbox div{
+    margin-top: 5%;
+}
+.flight-type{
+    color: var(--text-gray-color);
+    margin-right: 10%; 
+}
+.flight-type div{
+    margin-top: 5%;
+}
