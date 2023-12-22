@@ -1,0 +1,37 @@
+.main-holder{
+    width: 100%;
+    direction: rtl;
+    height: 8rem;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bbbbbb;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.src-dst-holder{
+    width: 95%;
+    margin-top: 1rem;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+}
+.src{
+    width: 40%;
+}
+.dst{
+    width: 40%;
+}
+.buy{
+    width: 60%;
+    align-self: last baseline;
+    direction: ltr;
+    margin-left: 5%;
+}
+.price{
+    direction: ltr;
+    margin-left: 5%;
+    margin-top: 2%;
+    color: var(--main-color);
+}

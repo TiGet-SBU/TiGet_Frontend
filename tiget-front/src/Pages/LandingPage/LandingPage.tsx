@@ -2,14 +2,14 @@ import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar';
 import SearchForm from '../../Components/SearchForm/SearchForm';
 import { DescriptionCard } from '../../Components/Description-card/DescriptionCard';
-import { Ticket } from '../../FakeData/fakeData';
-import { fakeTickets } from '../../FakeData/fakeData';
+import { Preview } from '../../FakeData/fakeData';
+import { fakePreview } from '../../FakeData/fakeData';
 import './LandingPage.css';
 
 
 
-const CreateTickets : React.FC<{ tickets: Ticket[] }> = ({tickets}) => {
-  const cards = tickets.map( ticket => <DescriptionCard ticket={ticket}/>);
+const CreatePreview : React.FC<{ previews: Preview[] }> = ({previews: previews}) => {
+  const cards = previews.map( preview => <DescriptionCard preview={preview}/>);
   return <>
     {cards}
   </>
@@ -27,7 +27,7 @@ const LandingPage = () => {
         مقاصد پرطرفدار
       </div>
       <div className='search-card-holder'>
-        <CreateTickets tickets={fakeTickets}/>
+        <CreatePreview previews={fakePreview}/>
       </div>
     </div>
   );

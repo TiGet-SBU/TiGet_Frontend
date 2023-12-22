@@ -1,17 +1,29 @@
-export type Ticket = {
+export type Preview = {
     name: string,
     Vehicle: string, 
     description : string,
     image : any, 
-    price : number
    };
+export type Ticket = {
+   src : string,
+   dst : string,
+   time : Date,
+   vehicle : string,
+   price : number
+}
 const img = require("../Resources/destination.jpg");
-export const fakeTickets: Ticket[] = [
-   {name: "تهران", Vehicle : "اتوبوس", description : "پایتخت ایران",image : img ,price : 1780000 },
-   {name: "تبریز", Vehicle : "قطار", description : "شهر دل انگیز",image : img ,price : 98725532  },
-   {name: "شیراز", Vehicle : "هواپیما", description : "شهر شعر و ادب",image : img ,price : 1764487  },
-   {name: "اصفهان", Vehicle : "قطار", description : "نصف جهان",image : img ,price : 5542378965  }
+export const fakePreview: Preview[] = [
+   {name: "تهران", Vehicle : "اتوبوس", description : "پایتخت ایران",image : img },
+   {name: "تبریز", Vehicle : "قطار", description : "شهر دل انگیز",image : img },
+   {name: "شیراز", Vehicle : "هواپیما", description : "شهر شعر و ادب",image : img},
+   {name: "اصفهان", Vehicle : "قطار", description : "نصف جهان",image : img}
  ];
+ export const fakeTickets : Ticket[] = [
+   {src: "تهران" , dst:"دبی",time: new Date("2018-8-9"), vehicle:"Airplane", price:1785556687},
+   {src: "تهران" , dst:"استانبول",time: new Date("2013-2-2"), vehicle:"Bus", price:9978835457},
+   {src: "تبریز" , dst:"تهران",time: new Date("2017-4-12"), vehicle:"Train", price:1231548796},
+   {src: "تهران" , dst:"علی آباد",time: new Date("2012-8-9"), vehicle:"Airplane", price:1785978978},
+ ]
  export const fakeAirLines: string[] = [
    "iran air",
    "mahan",
