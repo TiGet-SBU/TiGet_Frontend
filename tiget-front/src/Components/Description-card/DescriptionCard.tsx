@@ -19,13 +19,7 @@ export const DescriptionCard : React.FC<{ ticket: Ticket}> = ({ticket}) => {
         </div>
       </div>
       <div className='price-vehicle-holder'>
-        <div>
-          {ticket.Vehicle}
-        </div>
-        <div>
-          {ticket.price} تومان
-        </div>
-        <Button text='خرید' onClick={()=>true}/>
+        <Button text='نمایش بلیت ها' onClick={()=>true}/>
       </div>
     </div>
   )
