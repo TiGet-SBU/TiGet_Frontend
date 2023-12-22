@@ -18,7 +18,7 @@ export const DescriptionCard : React.FC<{ ticket: Ticket}> = ({ticket}) => {
           </div>
         </div>
       </div>
-      <div className='price-vehicle-holder'>
+      <div className='ticket-show'>
         <Button text='نمایش بلیت ها' onClick={()=>true}/>
       </div>
     </div>

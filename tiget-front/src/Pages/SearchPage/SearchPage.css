@@ -1,0 +1,32 @@
+.main-body-sp{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.specification-bar-holder-sp{
+    width: 20%;
+    direction: rtl;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 7px 7px 5px rgba(0,0,0,.1);
+}
+.ticket-search-form-holder-sp{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.search-form-holder-sp{
+    height: 12rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 7px 7px 5px rgba(0,0,0,.1);
+}
+@media only screen and (max-width: 1280px) {
+    .search-form-holder-sp{
+        height: 250px;
+    }
+}
+@media only screen and (max-width : 391px) {
+    .search-form-holder-sp{
+        height: 350px;
+    }
+}

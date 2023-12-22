@@ -1,9 +1,9 @@
-.price-vehicle-holder
+.ticket-show
 {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 5px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     font-size: small;
     color: var(--text-gray-color);
 }
