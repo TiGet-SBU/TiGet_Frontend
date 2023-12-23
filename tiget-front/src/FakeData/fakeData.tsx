@@ -19,10 +19,10 @@ export const fakePreview: Preview[] = [
    {name: "اصفهان", Vehicle : "قطار", description : "نصف جهان",image : img}
  ];
  export const fakeTickets : Ticket[] = [
-   {src: "تهران" , dst:"دبی",time: new Date("2018-8-9"), vehicle:"Airplane", price:1785556687},
-   {src: "تهران" , dst:"استانبول",time: new Date("2013-2-2"), vehicle:"Bus", price:9978835457},
-   {src: "تبریز" , dst:"تهران",time: new Date("2017-4-12"), vehicle:"Train", price:1231548796},
-   {src: "تهران" , dst:"علی آباد",time: new Date("2012-8-9"), vehicle:"Airplane", price:1785978978},
+   {src: "تهران" , dst:"دبی",time: new Date("2018-8-9"), vehicle:"هواپیما", price:1785556687},
+   {src: "تهران" , dst:"استانبول",time: new Date("2013-2-2"), vehicle:"اتوبوس", price:9978835457},
+   {src: "تبریز" , dst:"تهران",time: new Date("2017-4-12"), vehicle:"قطار", price:1231548796},
+   {src: "تهران" , dst:"علی آباد",time: new Date("2012-8-9"), vehicle:"هواپیما", price:1785978978},
  ]
  export const fakeAirLines: string[] = [
    "iran air",

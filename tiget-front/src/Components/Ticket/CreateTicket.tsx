@@ -10,14 +10,22 @@ const CreateTicket : React.FC<{ ticket: Ticket}> = ({ticket}) =>{
           {ticket.src}
         </div>
         <div className='dst'>
-          {ticket.dst}
+        به {ticket.dst} 
         </div>
         <div className='buy'>
           <Button text='خرید' onClick={()=>true}/>
         </div>
       </div>
-      <div className='price'>
-        {ticket.price}
+      <div className='price-time-vehicle-holder'>
+        <div className='time'>
+          {ticket.time.toDateString()}
+        </div>
+        <div className='vehicle'>
+          {ticket.vehicle}
+        </div>
+        <div className='price'>
+          {ticket.price}
+        </div>
       </div>
     </div>
   )

@@ -25,13 +25,25 @@
 }
 .buy{
     width: 60%;
-    align-self: last baseline;
     direction: ltr;
     margin-left: 5%;
 }
+.price-time-vehicle-holder{
+    display: flex;
+    margin-top: 2%;
+    margin-right: 2%;
+    width: 95%;
+    flex-direction: row;
+}
 .price{
     direction: ltr;
-    margin-left: 5%;
-    margin-top: 2%;
+    margin-left: 2%;
     color: var(--main-color);
+    width: 40%;
+}
+.time{
+    width: 40%;
+}
+.vehicle{
+    width: 40%;
 }
