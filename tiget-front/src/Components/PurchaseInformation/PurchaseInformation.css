@@ -1,0 +1,25 @@
+.user-form {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  margin: 6px 8px;
+  padding: 6px 8px;
+  line-height: 24px;
+  width: 247px;
+}
+
+.form-input::placeholder {
+  font-size: 12px;
+  transform-origin: top right;
+  transform: translate(0, -100%) scale(0.8);
+  opacity: 0.8;
+}
