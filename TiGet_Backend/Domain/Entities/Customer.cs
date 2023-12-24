@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    internal class Customer
+    public record Customer : User
     {
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public DateOnly BirthDate { get; set; }
+
     }
 }
