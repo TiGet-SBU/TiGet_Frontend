@@ -11,7 +11,22 @@ export type Ticket = {
    vehicle : string,
    price : number
 }
+export type Account = {
+  first_name : string,
+  last_name : string,
+  password : string,
+  birth_date : Date,
+  email : string,
+  phone_number : string
+}
 const img = require("../Resources/destination.jpg");
+export const sina : Account = {first_name : "سینا",
+                               last_name : "طاهری بهروز",
+                               password : "123456",
+                               birth_date : new Date("2019-4-5"),
+                               email : "sinatb.dev@gmail.com",
+                               phone_number : "+989999999999"};
+
 export const fakePreview: Preview[] = [
    {name: "تهران", Vehicle : "اتوبوس", description : "پایتخت ایران",image : img },
    {name: "تبریز", Vehicle : "قطار", description : "شهر دل انگیز",image : img },
@@ -23,18 +38,18 @@ export const fakePreview: Preview[] = [
    {src: "تهران" , dst:"استانبول",time: new Date("2013-2-2"), vehicle:"اتوبوس", price:9978835457},
    {src: "تبریز" , dst:"تهران",time: new Date("2017-4-12"), vehicle:"قطار", price:1231548796},
    {src: "تهران" , dst:"علی آباد",time: new Date("2012-8-9"), vehicle:"هواپیما", price:1785978978},
- ]
+ ];
  export const fakeAirLines: string[] = [
    "iran air",
    "mahan",
    "lufthansa",
    "Qatar Airlines",
    "United Airlines"
- ]
+ ];
  export const types: string[] = [
    "مستقیم",
    "یک",
    "دو",
    "بیشتر از 2",
    "همه"
- ]
+ ];

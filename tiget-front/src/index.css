@@ -3,6 +3,7 @@
   --main-color : #1D91CC;
   --main-color-hover: #6fa3bd;
   --text-white-color : #FFFFFF;
+  --line-color : #e3e3e3;
 }
 body {
   margin: 0;
