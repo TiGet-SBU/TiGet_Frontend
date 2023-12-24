@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public record Ticket
+    public record Ticket : BaseEntity
     {
-        public required Guid Id { get; set; }
         public required DateTime TimeToGo { get; set; }
         public required double Price { get; set; }
 

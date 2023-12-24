@@ -1,4 +1,5 @@
-﻿using Domain.Enums;
+﻿using Domain.Common;
+using Domain.Enums;
 using Domain.Structs;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public record Station
+    public record Station : BaseEntity
     {
-        public required Guid Id { get; set; }
         public required Guid CityId { get; set; }
         public City? City { get; set; }
         public Location Location { get; set; }
