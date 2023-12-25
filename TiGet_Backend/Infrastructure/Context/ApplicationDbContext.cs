@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Infrastructure.Extensions.Configurations;
 
 namespace Infrastructure.Context
 {
@@ -39,5 +40,15 @@ namespace Infrastructure.Context
         public DbSet<Vehicle> Vehicles { get; set; } = null!;
         public DbSet<Station> Stations { get; set; } = null!;
         public DbSet<Order> Orders { get; set; } = null!;
+        public DbSet<User> Users { get; set; } = null!;
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Other configurations...
+
+            modelBuilder.ApplyConfiguration(new CustomerConfiguration()); // Add this line
+        }
     }
 }

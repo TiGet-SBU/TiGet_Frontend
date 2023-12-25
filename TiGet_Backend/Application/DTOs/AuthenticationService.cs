@@ -1,5 +1,4 @@
-﻿// AuthenticationService.cs in Application
-using System;
+﻿using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
