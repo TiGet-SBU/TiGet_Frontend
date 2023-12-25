@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public record Company : User
     {
-        public string Name { get; set; } = string.Empty;
+        public required string Name { get; set; }
         public string Description { get; set; } = string.Empty;
         public string Address { get; set; } = string.Empty;
 
