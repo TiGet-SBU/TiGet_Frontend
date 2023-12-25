@@ -1,12 +1,14 @@
+// PurchaseInformation.tsx
 import React, { useState } from "react";
 import "./PurchaseInformation.css";
-// import "../../JalaliCalendar/JalaliCalendar.tsx";
-// import JalaliDatePicker from "../JalaliCalendar/JalaliCalendar";
-// import "./UserForm.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const UserForm: React.FC = () => {
+const PurchaseInformation: React.FC<{
+  onRemove: () => void;
+  id: number;
+  removable: boolean;
+}> = ({ onRemove, id, removable }) => {
   const [latinFirstName, setLatinFirstName] = useState("");
   const [latinLastName, setLatinLastName] = useState("");
   const [gender, setGender] = useState("");
@@ -113,9 +115,10 @@ const UserForm: React.FC = () => {
           calendarClassName="datepicker-calendar"
           locale="fa"
         />
+        {removable && <button onClick={onRemove}>حذف کردن</button>}
       </div>
     </div>
   );
 };
 
-export default UserForm;
+export default PurchaseInformation;
