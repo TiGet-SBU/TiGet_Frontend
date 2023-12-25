@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Runtime.Serialization;
-using Rhazes.Services.Identity.API.Application.DTO;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
-using Rhazes.Services.Identity.Infrastructure;
+using Identity.API.Application.DTO;
+using Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.Infrastructure;
 
-namespace Rhazes.Services.Identity.API.Application.Commands
+namespace Identity.API.Application.Commands
 {
     [DataContract]
     public class RegisterCommand : BaseCommand<UserPatientDTO>
@@ -14,26 +14,15 @@ namespace Rhazes.Services.Identity.API.Application.Commands
             Guid? id,
             string name,
             string lastName,
-            string nationalCode,
-            string phoneNumber,
-            string password,
-            string confirmPassword,
-            int userType,
-            string medicalLicenseNumber,
-            int gender
+            string Email,
+            string password
             )
         {
             ObjectDTO.Id = id;
             ObjectDTO.Name = name;
             ObjectDTO.LastName = lastName;
-            ObjectDTO.NationalCode = nationalCode;
-            ObjectDTO.PhoneNumber = phoneNumber;
+            ObjectDTO.Email = Email;
             ObjectDTO.Password = password;
-            ObjectDTO.ConfirmPassword = confirmPassword;
-            ObjectDTO.UserType = userType;
-            ObjectDTO.UserName = nationalCode;
-            ObjectDTO.MedicalLicenseNumber = medicalLicenseNumber;
-            ObjectDTO.Gender = gender;
         }
     }
 }

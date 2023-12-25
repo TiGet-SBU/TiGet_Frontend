@@ -4,15 +4,13 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Rhazes.BuildingBlocks.Common;
-using Rhazes.BuildingBlocks.Common.Infrastructure;
-using Rhazes.Services.Identity.API.Application.DTO;
-using Rhazes.Services.Identity.API.Application.IntegrationEvents;
-using Rhazes.Services.Identity.API.Application.IntegrationEvents.Events;
-using Rhazes.Services.Identity.API.Application.Queries;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.API.Application.DTO;
+using Identity.API.Application.IntegrationEvents;
+using Identity.API.Application.IntegrationEvents.Events;
+using Identity.API.Application.Queries;
+using Identity.Domain.AggregatesModel.UserAggregate;
 
-namespace Rhazes.Services.Identity.API.Application.Commands
+namespace Identity.API.Application.Commands
 {
     public class RegisterCommandHandler : IRequestHandler<RegisterCommand, UserPatientDTO>
     {
@@ -48,16 +46,10 @@ namespace Rhazes.Services.Identity.API.Application.Commands
                     UpdateUserCommand updateUserCommand = new(
                         command.ObjectDTO.Id.Value,
                         user.UserName,
-                        user.Email,
-                        command.ObjectDTO.PhoneNumber,
+                        command.ObjectDTO.Email,
                         command.ObjectDTO.Name,
                         command.ObjectDTO.LastName,
-                        command.ObjectDTO.Password,
-                        command.ObjectDTO.ConfirmPassword,
-                        command.ObjectDTO.UserType,
-                        phoneNumberConfirmed: false,
-                        irimcConfirmed: false,
-                        finalConfirmed: false);
+                        command.ObjectDTO.Password);
                     user = await _mediator.Send(updateUserCommand, cancellationToken);
 
                  
@@ -67,17 +59,10 @@ namespace Rhazes.Services.Identity.API.Application.Commands
             }
 
             var createUserCommand = new CreateUserCommand(
-                command.ObjectDTO.NationalCode,
-                $"default@gmail.com",
-                command.ObjectDTO.PhoneNumber,
+                command.ObjectDTO.Email,
                 command.ObjectDTO.Password,
-                command.ObjectDTO.ConfirmPassword,
                 command.ObjectDTO.Name,
                 command.ObjectDTO.LastName,
-                command.ObjectDTO.NationalCode,
-                command.ObjectDTO.UserType,
-                command.ObjectDTO.Gender,
-                command.ObjectDTO.MedicalLicenseNumber
                 );
 
             user = await _mediator.Send(createUserCommand, cancellationToken);

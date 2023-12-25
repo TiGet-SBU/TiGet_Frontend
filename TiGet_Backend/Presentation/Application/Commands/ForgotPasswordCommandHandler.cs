@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using MediatR;
 using Rhazes.BuildingBlocks.Common;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.Domain.AggregatesModel.UserAggregate;
 
-namespace Rhazes.Services.Identity.API.Application.Commands
+namespace Identity.API.Application.Commands
 {
     public class ForgotPasswordCommandHandler : IRequestHandler<ForgotPasswordCommand, bool>
     {

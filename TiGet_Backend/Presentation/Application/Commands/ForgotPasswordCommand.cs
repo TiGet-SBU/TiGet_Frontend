@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System.Runtime.Serialization;
 
-namespace Rhazes.Services.Identity.API.Application.Commands
+namespace Identity.API.Application.Commands
 {
     [DataContract]
     public class ForgotPasswordCommand : IRequest<bool>

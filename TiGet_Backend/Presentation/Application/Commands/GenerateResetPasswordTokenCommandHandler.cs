@@ -2,12 +2,11 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using MediatR;
-using Rhazes.BuildingBlocks.Common;
-using Rhazes.Services.Identity.API.Application.IntegrationEvents;
-using Rhazes.Services.Identity.API.Application.IntegrationEvents.Events;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.API.Application.IntegrationEvents;
+using Identity.API.Application.IntegrationEvents.Events;
+using Identity.Domain.AggregatesModel.UserAggregate;
 
-namespace Rhazes.Services.Identity.API.Application.Commands
+namespace Identity.API.Application.Commands
 {
     public class GenerateResetPasswordTokenCommandHandler : IRequestHandler<GenerateResetPasswordTokenCommand, string>
     {

@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using System.Runtime.Serialization;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.Domain.AggregatesModel.UserAggregate;
 
-namespace Rhazes.Services.Identity.API.Application.Commands
+namespace Identity.API.Application.Commands
 {
     [DataContract]
     public class GenerateResetPasswordTokenCommand: IRequest<string>
