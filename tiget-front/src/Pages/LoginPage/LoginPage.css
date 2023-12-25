@@ -6,7 +6,7 @@
     font-weight: 800;
     color: var(--main-color);
 }
-form{
+.login-form{
     margin-top: 10%;
     display: flex;
     align-items: center;

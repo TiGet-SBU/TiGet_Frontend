@@ -3,12 +3,14 @@ import Navbar from '../../Components/Navbar/Navbar';
 import { Account, sina } from '../../FakeData/fakeData';
 import './AccountPage.css';
 const UserDataCard = () => {
-  return <>
-  </>
+  return <div className='data-card'>
+      
+  </div>
 }
 const UserBalanceCard = () => {
-  return <>
-  </>
+  return <div>
+
+  </div>
 }
 const RightSide : React.FC<{account : Account}> = ({account}) => {
   return <div className='right-side'>
