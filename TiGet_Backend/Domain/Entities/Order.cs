@@ -17,7 +17,7 @@ namespace Domain.Entities
 
         public required string TicketOwnerFirstName { get; set; }
         public required string TicketOwnerLastName { get; set; }
-        public required string NatinalId { get; set; }
+        public required string NationalId { get; set; }
 
 
         // time of transaction == createdDate
