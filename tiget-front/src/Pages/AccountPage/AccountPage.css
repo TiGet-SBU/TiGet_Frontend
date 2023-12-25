@@ -1,0 +1,52 @@
+.main-flex{
+    direction: rtl;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.image
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    background-color: var(--main-color);
+}
+.ph{
+    color: var(--text-gray-color);
+    font-size: small;
+}
+.line{
+    background-color : var(--line-color);
+    width: 80%;
+    height: 2px;
+}
+.holder
+{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.right-side
+{
+    width: 20%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 7px 7px 5px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.state-button
+{
+    margin-top: 30px;
+    margin-right: 10%;
+}
+.right-side-state-holder{
+    width: 100%;
+}
+.exit{
+    margin-top: 30px;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    color: red;
+}
