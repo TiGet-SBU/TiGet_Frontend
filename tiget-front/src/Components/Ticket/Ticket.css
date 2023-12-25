@@ -39,6 +39,13 @@
 .buy-price-holder div{
     margin-bottom: 10px;
 }
+.buy{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .price{
+    display: flex;
     color: var(--main-color);
+    justify-content: center;
 }
