@@ -37,19 +37,23 @@ const UserDataCard : React.FC<{account : Account}> = ({account}) =>
         </div>
         <div className='data-card-holder'>
           <div>شماره همراه</div>
-          <input className='data-card-input' value={phoneNumber} onChange={handlePhoneNumberChange}/>
+          <input className='data-card-input' value={phoneNumber} onChange={handlePhoneNumberChange} style={{direction:'ltr'}}/>
         </div>
       </form>
-      <Button text='اعمال تغییرات' onClick={()=>true}/>
-
+      <div className='account-acceptance-button'>
+        <Button text='اعمال تغییرات' onClick={()=>true}/>
+      </div>
   </div>
 }
 const UserBalanceCard = () => {
   return <div>
-
+    اطلاعات نامفید
   </div>
 }
-const RightSide : React.FC<{account : Account}> = ({account}) => {
+const RightSide : React.FC<{account : Account, callback : (newPage : number) => void}> = ({account,callback}) => {
+  const handleClick = (page : number)=>{
+    callback(page);
+  }
   return <div className='right-side'>
     <div className='right-side-content-holder'>
       <div className='holder'>
@@ -69,10 +73,10 @@ const RightSide : React.FC<{account : Account}> = ({account}) => {
       <div className='holder'>
         <div className='line'></div>
       </div>
-      <div className='state-button'>
+      <div className='state-button' onClick={()=>handleClick(0)}>
         اطلاعات حساب کاربری
       </div>
-      <div className='state-button'>
+      <div className='state-button' onClick={()=>callback(1)}>
         افزایش اعتبار
       </div>
       <div className='exit'>
@@ -85,7 +89,7 @@ const AccountPage = () => {
   //page = 0 => user data
   //page = 1 => increase money
   const [page,setPage] = React.useState(0);
-  function handlePageChange(newPage : number) {
+  const handlePageChange = (newPage : number) => {
     setPage(newPage);
   }
   return (
@@ -93,7 +97,7 @@ const AccountPage = () => {
       <Navbar/>
       <div className='main-flex'>
         
-        <RightSide account={sina}/>
+        <RightSide account={sina} callback={handlePageChange}/>
         <div className='left-flex'>
           {
             page === 0 ? (<UserDataCard account={sina}/>) : (<UserBalanceCard/>) 
