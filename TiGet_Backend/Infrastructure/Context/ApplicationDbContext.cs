@@ -1,4 +1,6 @@
 ﻿using Domain.Entities;
+using Infrastructure.Extensions.Configurations;
+using Infrastructure.Extensions.DataSeed;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,25 +15,32 @@ namespace Infrastructure.Context
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
 
-        /*
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=TicketManagementDb;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true;";
+            // TODO: fix this part: 
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=TiGet_1;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true;";
             optionsBuilder.UseSqlServer(connectionString);
         }
 
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new CityConfiguration());
+            modelBuilder.ApplyConfiguration(new CompanyConfiguration());
+            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            modelBuilder.ApplyConfiguration(new StationConfiguration());
             modelBuilder.ApplyConfiguration(new TicketConfiguration());
-            ...
-
-            modelBuilder.Seed();
+            modelBuilder.ApplyConfiguration(new VehicleConfiguration());
+            
+            modelBuilder.SeedValuesInDateBase();
         }
-        */ 
+        
 
         public DbSet<Customer> Customers { get; set; } = null!;
         public DbSet<Company> Companies { get; set; } = null!;
