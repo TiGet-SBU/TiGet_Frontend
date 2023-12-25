@@ -12,7 +12,7 @@ namespace Infrastructure.Extensions.DataSeed
 {
     public static class DataSeeder
     {
-        public static void Seed(this ModelBuilder modelBuilder)
+        public static void SeedValuesInDateBase(this ModelBuilder modelBuilder)
         {
             modelBuilder.SeedAdmins();
             modelBuilder.SeedVehicles();
@@ -26,6 +26,8 @@ namespace Infrastructure.Extensions.DataSeed
                     {
                         Id = new Guid(),
                         Email = "admin@admin.com",
+
+                        // todo: make better?!
                         PasswordHash = "$2a$11$.64fLerPDfuVgkHnbF3o6uBF1MGQqfxYoPivqq8HkwvevmKIbT5gy", // 1234
                         Role = Role.Admin,
                     }
