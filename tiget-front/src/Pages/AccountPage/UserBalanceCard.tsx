@@ -10,6 +10,7 @@ export const UserBalanceCard:React.FC<{account : Account}> = ({account}) => {
     setBalance(parseInt(e.target.value));
   } 
   const handleButtonClick = () =>{
+    account.balance = result + balance;
     setResult((prevResult) => prevResult + balance)
   }
   return <div className='user-balance-card'>
