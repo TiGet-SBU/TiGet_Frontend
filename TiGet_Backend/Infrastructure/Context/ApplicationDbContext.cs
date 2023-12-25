@@ -34,10 +34,10 @@ namespace Infrastructure.Context
         */ 
 
         public DbSet<Customer> Customers { get; set; } = null!;
+        public DbSet<Company> Companies { get; set; } = null!;
         public DbSet<Ticket> Tickets { get; set; } = null!;
         public DbSet<Vehicle> Vehicles { get; set; } = null!;
         public DbSet<Station> Stations { get; set; } = null!;
-        public DbSet<Order> Orders   { get; set; } = null!;
-        public DbSet<Company> Companies { get; set; } = null!;
+        public DbSet<Order> Orders { get; set; } = null!;
     }
 }
