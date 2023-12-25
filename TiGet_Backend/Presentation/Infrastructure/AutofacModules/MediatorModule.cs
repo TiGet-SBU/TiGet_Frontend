@@ -7,10 +7,10 @@ using Autofac;
 using FluentValidation;
 using Identity.API.Application.Behaviors;
 using MediatR;
-using Rhazes.Services.Identity.API.Application.Commands;
-using Rhazes.Services.Identity.API.Application.Validations;
+using Identity.API.Application.Commands;
+using Identity.API.Application.Validations;
 
-namespace Rhazes.Services.Identity.API.Infrastructure.AutofacModules
+namespace Identity.API.Infrastructure.AutofacModules
 {
     public class MediatorModule : Autofac.Module
     {

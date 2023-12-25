@@ -1,19 +1,18 @@
 ﻿using Autofac;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
-using Rhazes.BuildingBlocks.Common.Infrastructure;
-using Rhazes.Services.Identity.API.Infrastructure.Services;
-using Rhazes.Services.Identity.Domain.AggregatesModel.RoleAggregate;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
-using Rhazes.Services.Identity.Domain.Seedwork;
-using Rhazes.Services.Identity.Domain.Validators;
-using Rhazes.Services.Identity.Infrastructure.Data;
-using Rhazes.Services.Identity.Infrastructure.Repositories;
+using Identity.API.Infrastructure.Services;
+using Identity.Domain.AggregatesModel.RoleAggregate;
+using Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.Domain.Seedwork;
+using Identity.Domain.Validators;
+using Identity.Infrastructure.Data;
+using Identity.Infrastructure.Repositories;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 
-namespace Rhazes.Services.Identity.API.Infrastructure.AutofacModules
+namespace Identity.API.Infrastructure.AutofacModules
 {
     public class ApplicationModule : Autofac.Module
     {

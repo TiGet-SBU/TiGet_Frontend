@@ -1,14 +1,11 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using Rhazes.BuildingBlocks.Common;
-using Rhazes.BuildingBlocks.Common.Infrastructure;
-using Rhazes.BuildingBlocks.Common.Services;
-using Rhazes.Services.Identity.API.Application.DTO;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
-using Rhazes.Services.Identity.Domain.Validators;
+using Identity.API.Application.DTO;
+using Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.Domain.Validators;
 
-namespace Rhazes.Services.Identity.API.Application.Commands
+namespace Identity.API.Application.Commands
 {
     public class AddOrUpdateUserCommandHandler : IRequestHandler<AddOrUpdateUserCommand, UserPatientDTO>
     {

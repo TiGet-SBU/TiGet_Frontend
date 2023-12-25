@@ -4,7 +4,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Rhazes.Services.Identity.API.Infrastructure.Auth
+namespace Identity.API.Infrastructure.Auth
 {
     public class AuthorizationHeaderParameterOperationFilter : IOperationFilter
     {

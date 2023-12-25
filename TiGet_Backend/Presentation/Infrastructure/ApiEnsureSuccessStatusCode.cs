@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using Rhazes.BuildingBlocks.Common.Exception;
 using System;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Rhazes.Services.Identity.API.Infrastructure
+namespace Identity.API.Infrastructure
 {
     public static class ApiEnsureSuccessStatusCode
     {

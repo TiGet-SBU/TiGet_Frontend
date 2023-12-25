@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Rhazes.Services.PadidarServerIdentity.Models.AccountViewModels
+namespace Models.AccountViewModels
 {
     public class LoginViewModel
     {

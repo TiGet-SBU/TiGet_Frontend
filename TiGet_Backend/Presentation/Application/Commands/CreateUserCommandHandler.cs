@@ -1,14 +1,12 @@
 ﻿using MediatR;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.Domain.AggregatesModel.UserAggregate;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Rhazes.BuildingBlocks.Common;
-using Rhazes.Services.Identity.Domain.Validators;
-using Rhazes.Services.Identity.API.Application.DTO;
-using Rhazes.BuildingBlocks.Common.Infrastructure;
+using Identity.Domain.Validators;
+using Identity.API.Application.DTO;
 
-namespace Rhazes.Services.Identity.API.Application.Commands
+namespace Identity.API.Application.Commands
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserPatientDTO>
     {

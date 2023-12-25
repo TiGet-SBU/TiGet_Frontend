@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using Rhazes.Services.Identity.API.Application.Commands;
 
-namespace Rhazes.Services.Identity.API.Application.Validations
+namespace Identity.API.Application.Validations
 {
     public class SetPasswordCommandValidator : AbstractValidator<SetPasswordCommand>
     {

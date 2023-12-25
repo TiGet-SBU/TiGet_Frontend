@@ -1,4 +1,4 @@
-﻿namespace Rhazes.Services.Identity.API.Infrastructure
+﻿namespace Identity.API.Infrastructure
 {
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.EntityFrameworkCore;
@@ -9,7 +9,7 @@
     using System;
     using System.Data.SqlClient;
     using System.Threading.Tasks;
-    using Rhazes.Services.Identity.Infrastructure.Data;
+    using Identity.Infrastructure.Data;
 
     public class IdentityContextSeed
     {

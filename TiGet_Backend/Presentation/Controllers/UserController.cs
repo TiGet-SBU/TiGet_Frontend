@@ -3,19 +3,16 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
-using Rhazes.Services.Identity.API.Application.Commands;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
-using Rhazes.Services.Identity.API.Application.Queries;
+using Identity.API.Application.Commands;
+using Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.API.Application.Queries;
 using System.Collections.Generic;
-using Rhazes.BuildingBlocks.Common.Models;
-using Rhazes.Services.Identity.API.Application.DTO;
-using Rhazes.BuildingBlocks.Common;
+using Identity.API.Application.DTO;
 using static IdentityServer4.IdentityServerConstants;
-using Rhazes.BuildingBlocks.Common.Services;
-using Rhazes.Services.Identity.API.Application.IntegrationEvents;
-using Rhazes.Services.Identity.API.Application.IntegrationEvents.Events;
+using Identity.API.Application.IntegrationEvents;
+using Identity.API.Application.IntegrationEvents.Events;
 
-namespace Rhazes.Services.Identity.API.Controllers
+namespace Identity.API.Controllers
 {
     [Route("api/v1/[controller]")]
     [Authorize]

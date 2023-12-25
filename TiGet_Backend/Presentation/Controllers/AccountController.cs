@@ -11,19 +11,17 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
-using Rhazes.Services.Identity.Infrastructure.Repositories;
-using Rhazes.Services.PadidarServerIdentity.Models.AccountViewModels;
+using Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.Infrastructure.Repositories;
 using MediatR;
-using Rhazes.BuildingBlocks.Common;
 using System.Net;
-using Rhazes.Services.Identity.API.Application.DTO;
-using Rhazes.Services.Identity.API.Application.Commands;
-using Rhazes.Services.Identity.API.Application.IntegrationEvents;
-using Rhazes.Services.Identity.API.Application.IntegrationEvents.Events;
+using Identity.API.Application.DTO;
+using Identity.API.Application.Commands;
+using Identity.API.Application.IntegrationEvents;
+using Identity.API.Application.IntegrationEvents.Events;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace Rhazes.Services.Identity.API.Controllers
+namespace Identity.API.Controllers
 {
 
 #if DEBUG

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Rhazes.Services.Identity.API.Application.DTO
+namespace Identity.API.Application.DTO
 {
     public class VerifyUserDTO
     {

@@ -1,10 +1,8 @@
-﻿
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using IdentityServer4.Models;
 
-namespace Rhazes.Services.PadidarServerIdentity.Models.AccountViewModels
+namespace Models.AccountViewModels
 {
     public class ConsentViewModel : ConsentInputModel
     {

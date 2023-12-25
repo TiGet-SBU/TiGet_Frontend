@@ -1,13 +1,12 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using FluentValidation;
-using Rhazes.Services.Identity.API.Application.Commands;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.API.Application.Commands;
+using Identity.Domain.AggregatesModel.UserAggregate;
 using System.Linq;
 using System;
-using Rhazes.BuildingBlocks.Common;
 
-namespace Rhazes.Services.Identity.API.Application.Validations
+namespace Identity.API.Application.Validations
 {
     public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
     {

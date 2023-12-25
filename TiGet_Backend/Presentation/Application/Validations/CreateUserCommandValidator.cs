@@ -3,12 +3,10 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using FluentValidation;
-using Rhazes.BuildingBlocks.Common;
-using Rhazes.BuildingBlocks.Common.Utility;
-using Rhazes.Services.Identity.API.Application.Commands;
-using Rhazes.Services.Identity.Domain.AggregatesModel.UserAggregate;
+using Identity.API.Application.Commands;
+using Identity.Domain.AggregatesModel.UserAggregate;
 
-namespace Rhazes.Services.Identity.API.Application.Validations
+namespace Identity.API.Application.Validations
 {
     public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
     {

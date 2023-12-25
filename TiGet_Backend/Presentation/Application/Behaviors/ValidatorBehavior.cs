@@ -4,8 +4,6 @@ using Microsoft.Extensions.Logging;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-/*using Rhazes.BuildingBlocks.EventBus.Extensions;
-using Rhazes.BuildingBlocks.Common.Exception;*/
 
 namespace Identity.API.Application.Behaviors
 {

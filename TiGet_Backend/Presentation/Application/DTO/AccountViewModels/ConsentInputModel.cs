@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Rhazes.Services.PadidarServerIdentity.Models.AccountViewModels
+namespace Models.AccountViewModels
 {
     public class ConsentInputModel
     {

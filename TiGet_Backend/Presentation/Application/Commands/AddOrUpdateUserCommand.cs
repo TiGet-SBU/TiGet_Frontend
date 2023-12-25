@@ -10,31 +10,17 @@ namespace Identity.API.Application.Commands
     {
         public AddOrUpdateUserCommand(
         Guid id,
-        string userName,
         string email,
-        string phoneNumber,
         string name,
         string lastName,
-        string password,
-        string confirmPassword,
-        int userType,
-        bool phoneNumberConfirmed,
-        bool irimcConfirmed,
-        bool finalConfirmed
+        string password
         )
         {
             ObjectDTO.Id = id;
             ObjectDTO.Name = name;
             ObjectDTO.LastName = lastName;
-            ObjectDTO.UserName = userName;
             ObjectDTO.Email = email;
-            ObjectDTO.PhoneNumber = phoneNumber;
-            ObjectDTO.PhoneNumberConfirmed = phoneNumberConfirmed;
             ObjectDTO.Password = password;
-            ObjectDTO.ConfirmPassword = confirmPassword;
-            ObjectDTO.UserType = userType;
-            ObjectDTO.IrimcConfirmed = irimcConfirmed;
-            ObjectDTO.FinalConfirmed = finalConfirmed;
         }
     }
 }
