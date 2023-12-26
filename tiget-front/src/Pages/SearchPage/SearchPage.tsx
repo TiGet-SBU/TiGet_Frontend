@@ -8,7 +8,7 @@ import CreateTicket from '../../Components/Ticket/CreateTicket';
 
 const SearchPage = () => {
   return (
-    <>
+    <>z
       <Navbar/>
       <div className='main-body-sp'>
         <div className='ticket-search-form-holder-sp'>
