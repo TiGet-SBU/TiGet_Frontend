@@ -1,4 +1,7 @@
 
+using Infrastructure.Context;
+using Microsoft.Data.SqlClient;
+
 namespace Presentation
 {
     public class Program
@@ -8,6 +11,9 @@ namespace Presentation
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            // context add
+            builder.Services.AddDbContext<ApplicationDbContext>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

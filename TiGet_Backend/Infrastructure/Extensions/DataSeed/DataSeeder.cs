@@ -16,7 +16,7 @@ namespace Infrastructure.Extensions.DataSeed
         {
             modelBuilder.SeedAdmins();
             modelBuilder.SeedVehicles();
-            modelBuilder.SeedStations();
+            //modelBuilder.SeedStations();
         }
 
         private static void SeedAdmins(this ModelBuilder modelBuilder)
@@ -24,12 +24,13 @@ namespace Infrastructure.Extensions.DataSeed
             modelBuilder.Entity<Customer>().HasData(
                     new Customer
                     {
-                        Id = new Guid(),
+                        Id = Guid.NewGuid(),
                         Email = "admin@admin.com",
 
                         // todo: make better?!
                         PasswordHash = "$2a$11$.64fLerPDfuVgkHnbF3o6uBF1MGQqfxYoPivqq8HkwvevmKIbT5gy", // 1234
                         Role = Role.Admin,
+                        CreatedDate = DateTime.Now,
                     }
                 );
         }
@@ -39,7 +40,7 @@ namespace Infrastructure.Extensions.DataSeed
             modelBuilder.Entity<Vehicle>().HasData(
                     new Vehicle
                     {
-                        Id = new Guid(),
+                        Id = Guid.NewGuid(),
                         Name = "Bus1",
                         Capacity = 30,
                         Type = VehicleType.Bus,
@@ -47,7 +48,7 @@ namespace Infrastructure.Extensions.DataSeed
                     },
                     new Vehicle
                     {
-                        Id = new Guid(),
+                        Id = Guid.NewGuid(),
                         Name = "Bus2",
                         Capacity = 40,
                         Type = VehicleType.Bus,
@@ -55,7 +56,7 @@ namespace Infrastructure.Extensions.DataSeed
                     },
                     new Vehicle
                     {
-                        Id = new Guid(),
+                        Id = Guid.NewGuid(),
                         Name = "Bus3",
                         Capacity = 20,
                         Type = VehicleType.Bus,
@@ -63,7 +64,7 @@ namespace Infrastructure.Extensions.DataSeed
                     },
                     new Vehicle
                     {
-                        Id = new Guid(),
+                        Id = Guid.NewGuid(),
                         Name = "Train1",
                         Capacity = 70,
                         Type = VehicleType.Train,
@@ -71,7 +72,7 @@ namespace Infrastructure.Extensions.DataSeed
                     },
                     new Vehicle
                     {
-                        Id = new Guid(),
+                        Id = Guid.NewGuid(),
                         Name = "Train2",
                         Capacity = 88,
                         Type = VehicleType.Train,
@@ -79,7 +80,7 @@ namespace Infrastructure.Extensions.DataSeed
                     },
                     new Vehicle
                     {
-                        Id = new Guid(),
+                        Id = Guid.NewGuid(),
                         Name = "Airplane1",
                         Capacity = 50,
                         Type = VehicleType.Airplane,
@@ -90,13 +91,13 @@ namespace Infrastructure.Extensions.DataSeed
 
         private static void SeedStations(this ModelBuilder modelBuilder)
         {
-            Guid Id = new Guid();
+            Guid Id = Guid.NewGuid();
             modelBuilder.Entity<Station>().HasData(
                
                     new Station
                     {
                         Name = "Test station",
-                        Id = new Guid(),
+                        Id = Guid.NewGuid(),
                         CityId = Id,
                         City = new City {
                             Id = Id,
@@ -104,7 +105,8 @@ namespace Infrastructure.Extensions.DataSeed
                             Province = "Tehran",
                             CreatedDate = DateTime.Now
                         },
-                        Location = new Location { x = 123, y = 132},
+                        //Location = new Location { x = 123, y = 132},
+                        Address = "some address",
                         vehicleType = VehicleType.Bus,
                         CreatedDate = DateTime.Now,
                        
