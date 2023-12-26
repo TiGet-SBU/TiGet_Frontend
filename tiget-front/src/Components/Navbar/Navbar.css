@@ -35,3 +35,6 @@
     border-radius: 25px;
     background-color: var(--main-color);
 }
+.account-photo:hover{
+    cursor: pointer;
+}

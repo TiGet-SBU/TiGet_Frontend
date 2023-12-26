@@ -2,11 +2,14 @@ import React from 'react';
 import { Account } from '../../FakeData/fakeData';
 import { useContext } from 'react';
 import { UserContext } from '../../Components/UserProvider/UserProvider';
+import { useNavigate } from 'react-router-dom';
 
 export const RightSide: React.FC<{ account: Account | null; onClick: (newPage: number) => void; }> = ({ account, onClick }) => {
- 
+  
+  const navigate = useNavigate();
   const {logout} = useContext(UserContext);
   const handleLogout = () => {
+    navigate("/");
     logout();
   }
   const handleClick = (page: number) => {
