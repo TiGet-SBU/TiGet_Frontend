@@ -40,11 +40,15 @@ export const RightSide: React.FC<{ account: Account | null; onClick: (newPage: n
           <div className='state-button' onClick={handleClick(0)}>
             اطلاعات حساب کاربری
           </div>
-          <div className='state-button' onClick={handleClick(1)}>
-            افزایش اعتبار
-          </div>
+          {type === userType.user ? 
+              <div className='state-button' onClick={handleClick(1)}>
+                افزایش اعتبار
+              </div>
+            :
+              <div></div>
+          }
           {type === userType.company ?           
-          <div className='state-button' onClick={handleClick(1)}>
+          <div className='state-button' onClick={handleClick(2)}>
             افزودن بلیت
           </div>:
           <div></div>

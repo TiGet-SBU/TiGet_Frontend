@@ -7,6 +7,7 @@ import { UserBalanceCard } from './UserBalanceCard';
 import { RightSide } from './RightSide';
 import { UserContext } from '../../Components/UserProvider/UserProvider';
 import Button from '../../Components/Button/Button';
+import CompanyTicketAdd from './CompanyTicketAdd';
 const AccountPage = () => {
   //page = 0 => user data
   //page = 1 => increase money
@@ -23,7 +24,9 @@ const AccountPage = () => {
         <RightSide account={userData} onClick={handlePageChange}/>
         <div className='left-flex'>
           {
-            page === 0 ? (<UserDataCard account={userData}/>) : (<UserBalanceCard account={userData}/>) 
+            page === 0 ? (<UserDataCard account={userData}/>) :
+            page === 1 ? (<UserBalanceCard account={userData}/>) :
+            (<CompanyTicketAdd account={userData}/>) 
           }
         </div>
       </div>
