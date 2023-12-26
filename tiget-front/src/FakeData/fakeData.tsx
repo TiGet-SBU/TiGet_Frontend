@@ -17,7 +17,8 @@ export type Account = {
   password : string,
   birth_date : Date,
   email : string,
-  phone_number : string
+  phone_number : string,
+  balance : number
 }
 const img = require("../Resources/destination.jpg");
 export const sina : Account = {first_name : "سینا",
@@ -25,6 +26,7 @@ export const sina : Account = {first_name : "سینا",
                                password : "123456",
                                birth_date : new Date("2019-4-5"),
                                email : "sinatb.dev@gmail.com",
+                               balance : 54648798,
                                phone_number : "+989999999999"};
 
 export const fakePreview: Preview[] = [

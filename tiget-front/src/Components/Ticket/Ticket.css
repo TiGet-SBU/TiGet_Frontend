@@ -8,42 +8,44 @@
     border-color: #bbbbbb;
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
-}
-.src-dst-holder{
-    width: 95%;
-    margin-top: 1rem;
-    margin-right: 5%;
-    display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
-.src{
-    width: 40%;
+.src-time-holder{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.dst{
-    width: 40%;
+.src-time-holder div{
+    margin-bottom: 20px;
+}
+.dst-vehicle-holder{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dst-vehicle-holder div{
+    margin-bottom: 20px;
+}
+.buy-price-holder{
+    margin-top: 20px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buy-price-holder div{
+    margin-bottom: 10px;
 }
 .buy{
-    width: 60%;
-    direction: ltr;
-    margin-left: 5%;
-}
-.price-time-vehicle-holder{
+    width: 100%;
     display: flex;
-    margin-top: 2%;
-    margin-right: 2%;
-    width: 95%;
-    flex-direction: row;
+    justify-content: center;
 }
 .price{
-    direction: ltr;
-    margin-left: 2%;
+    display: flex;
     color: var(--main-color);
-    width: 40%;
-}
-.time{
-    width: 40%;
-}
-.vehicle{
-    width: 40%;
+    justify-content: center;
 }

@@ -5,23 +5,25 @@ import Button from '../Button/Button';
 const CreateTicket : React.FC<{ ticket: Ticket}> = ({ticket}) =>{
   return (
     <div className='main-holder'>
-      <div className='src-dst-holder'>
+      <div className='src-time-holder'>
         <div className='src'>
           {ticket.src}
         </div>
-        <div className='dst'>
-        به {ticket.dst} 
-        </div>
-        <div className='buy'>
-          <Button text='خرید' onClick={()=>true}/>
+        <div className='time'>
+          {ticket.time.toDateString()} 
         </div>
       </div>
-      <div className='price-time-vehicle-holder'>
-        <div className='time'>
-          {ticket.time.toDateString()}
+      <div className='dst-vehicle-holder'>
+        <div className='dst'>
+          به {ticket.dst}
         </div>
         <div className='vehicle'>
           {ticket.vehicle}
+        </div>
+      </div>
+      <div className='buy-price-holder'>
+        <div className='buy'>
+            <Button text='خرید' onClick={()=>true}/>
         </div>
         <div className='price'>
           {ticket.price}

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import Button from '../../Components/Button/Button';
 import './LoginPage.css';
 const Login = () =>{
-    return <form>
+    return <form className='login-form'>
         <input type='text' placeholder='نام کاربری'/>
         <input type='text' placeholder='رمز عبور'/>
         <Button text='ورود' onClick={()=>true}/>
     </form>
 }
 const SignUp = () => {
-    return <form>
+    return <form className='login-form'>
         <input type='text' placeholder='نام کاربری'/>
         <input type='text' placeholder='رمز عبور'/>
         <input type='text' placeholder='تکرار رمز عبور'/>
