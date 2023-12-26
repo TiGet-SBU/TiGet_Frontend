@@ -1,22 +1,18 @@
+// BuyPage.tsx
 import React, { useState } from "react";
 import "./BuyPage.css";
 import PurchaseInformation from "../../Components/PurchaseInformation/PurchaseInformation";
 import Navbar from "../../Components/Navbar/Navbar";
 import CreateTicket from "../../Components/Ticket/CreateTicket";
-import { Ticket } from "../../FakeData/fakeData";
 import { fakeTickets } from "../../FakeData/fakeData";
+import { Link, useNavigate } from 'react-router-dom';
 
 const BuyPage = () => {
-  const [purchaseInfoComponents, setPurchaseInfoComponents] = useState<
-    JSX.Element[]
-  >([
-    <PurchaseInformation
-      key={0}
-      id={0}
-      onRemove={() => {}}
-      removable={false}
-    />,
-  ]);
+  const [purchaseInfoComponents, setPurchaseInfoComponents] = useState<JSX.Element[]>(
+    [<PurchaseInformation key={0} id={0} onRemove={() => {}} removable={false} />],
+  );
+
+  const navigate = useNavigate();
 
   const addNewPurchaseInfo = () => {
     const newId = purchaseInfoComponents.length;
@@ -33,20 +29,26 @@ const BuyPage = () => {
 
   const removePurchaseInfo = (idToRemove: number) => {
     if (purchaseInfoComponents.length === 1) return;
-    const updatedComponents = purchaseInfoComponents.filter(
-      (_, index) => index !== idToRemove
-    );
+    const updatedComponents = purchaseInfoComponents.filter((_, index) => index !== idToRemove);
     setPurchaseInfoComponents(updatedComponents);
   };
 
   const handleConfirmation = () => {
-    // Perform actions for confirming and continuing the purchase
-    // For instance, you might want to gather all the purchase information
-    // and proceed to the next step or finalize the transaction here
-    // You can also add validation logic before proceeding further
-    // This is a placeholder function, modify it according to your requirements
-    console.log("Purchase confirmed and continued!");
+    // Gather information from PurchaseInformation components
+    const userNames = purchaseInfoComponents.map((component, index) => ({
+      id: index,
+      firstName: component.props.latinFirstName,
+      lastName: component.props.latinLastName,
+    }));
+  
+    // Construct the URL with user names as parameters
+    const url = `/confirmationPage?${userNames.map((info) => `user=${encodeURIComponent(JSON.stringify(info))}`).join('&')}`;
+  
+    // Navigate to the confirmation page with user information
+    navigate(url);
   };
+  
+  
 
   return (
     <div>
@@ -59,9 +61,7 @@ const BuyPage = () => {
       ))}
       <div className="button-group">
         <button onClick={addNewPurchaseInfo}>اضافه کردن مسافر جدید</button>
-        <button
-          onClick={() => removePurchaseInfo(purchaseInfoComponents.length - 1)}
-        >
+        <button onClick={() => removePurchaseInfo(purchaseInfoComponents.length - 1)}>
           حذف کردن
         </button>
       </div>
