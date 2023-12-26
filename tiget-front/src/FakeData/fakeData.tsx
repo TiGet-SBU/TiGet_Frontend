@@ -78,3 +78,7 @@ export const fakePreview: Preview[] = [
    "بیشتر از 2",
    "همه"
  ];
+ export enum userType{
+  user,
+  company
+ }

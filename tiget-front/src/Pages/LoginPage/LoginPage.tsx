@@ -4,14 +4,15 @@ import Button from '../../Components/Button/Button';
 import './LoginPage.css';
 import { sag_Company, sina } from '../../FakeData/fakeData';
 import { useNavigate } from 'react-router-dom';
-const Login : React.FC<{loginType:boolean}> = ({loginType}) =>{
+import { userType } from '../../FakeData/fakeData';
+const Login : React.FC<{loginType:userType}> = ({loginType}) =>{
     const { login,userData } = useContext(UserContext);
     const navigate = useNavigate();
     const handleLogin = () => {
-            if (loginType)
-                login(sina);
+            if (loginType === userType.user)
+                login(sina,userType.user);
             else
-                login(sag_Company);
+                login(sag_Company,userType.company);
             navigate('/account');
       };
     return <form className='login-form'>
@@ -20,7 +21,7 @@ const Login : React.FC<{loginType:boolean}> = ({loginType}) =>{
         <Button text='ورود' onClick={handleLogin}/>
     </form>
 }
-const SignUp : React.FC<{loginType:boolean}> = ({loginType}) => {
+const SignUp : React.FC<{loginType:userType}> = ({loginType}) => {
     const handleSignUp = () => {
         return true;
     }
@@ -37,14 +38,17 @@ const LoginPage = () =>
     const [loginState,setLoginState] = useState<boolean>(true);
     // 0 means user login
     // 1 means company login
-    const [loginType,setLoginType] = useState<boolean>(true);
+    const [loginType,setLoginType] = useState<userType>(userType.user);
 
 
     const toggleState = () => {
         setLoginState(!loginState);
     }
     const toggleType = () => {
-        setLoginType(!loginType);
+        if (loginType === userType.user)
+            setLoginType(userType.company);
+        else
+            setLoginType(userType.company);
     }
     return (
         <div>

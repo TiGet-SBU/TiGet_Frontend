@@ -1,5 +1,5 @@
 import React from 'react';
-import { Account } from '../../FakeData/fakeData';
+import { Account, userType } from '../../FakeData/fakeData';
 import { useContext } from 'react';
 import { UserContext } from '../../Components/UserProvider/UserProvider';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 export const RightSide: React.FC<{ account: Account | null; onClick: (newPage: number) => void; }> = ({ account, onClick }) => {
   
   const navigate = useNavigate();
-  const {logout} = useContext(UserContext);
+  const {logout,type} = useContext(UserContext);
   const handleLogout = () => {
     navigate("/");
     logout();
@@ -43,6 +43,12 @@ export const RightSide: React.FC<{ account: Account | null; onClick: (newPage: n
           <div className='state-button' onClick={handleClick(1)}>
             افزایش اعتبار
           </div>
+          {type === userType.company ?           
+          <div className='state-button' onClick={handleClick(1)}>
+            افزودن بلیت
+          </div>:
+          <div></div>
+          }
           <div className='exit' onClick={handleLogout}>
             خروج از حساب
           </div>
