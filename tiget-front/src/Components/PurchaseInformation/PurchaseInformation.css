@@ -7,8 +7,8 @@
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   padding: 60px;
-  width: 1200px; /* Adjust the width as needed */
-  margin: 20px auto; /* Centers the form on the page */
+  width: 1200px;
+  margin: 20px auto;
 }
 
 .form-row {
@@ -63,4 +63,26 @@
 
 .button-group button:hover {
   background-color: var(--main-color-hover);
+}
+
+/* Add this to your CSS file or component */
+.confirmation-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Vazirmatn", sans-serif;
+  color: #fff;
+  background-color: var(--main-color); /* Change this color if needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Adjust margin top */
+  width: 30%; /* Make the button wider */
+  margin: 20px auto; /* Center the button horizontally */
+  display: block; /* Ensure the button takes up the full width */
+}
+
+.confirmation-button:hover {
+  background-color: var(--main-color-hover); /* Change hover color if needed */
 }

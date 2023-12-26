@@ -39,10 +39,21 @@ const BuyPage = () => {
     setPurchaseInfoComponents(updatedComponents);
   };
 
+  const handleConfirmation = () => {
+    // Perform actions for confirming and continuing the purchase
+    // For instance, you might want to gather all the purchase information
+    // and proceed to the next step or finalize the transaction here
+    // You can also add validation logic before proceeding further
+    // This is a placeholder function, modify it according to your requirements
+    console.log("Purchase confirmed and continued!");
+  };
+
   return (
     <div>
       <Navbar />
-      <CreateTicket ticket={fakeTickets[0]} />
+      <div className="buyPage-ticket">
+        <CreateTicket ticket={fakeTickets[0]} />
+      </div>
       {purchaseInfoComponents.map((component, index) => (
         <div key={index}>{component}</div>
       ))}
@@ -54,6 +65,10 @@ const BuyPage = () => {
           حذف کردن
         </button>
       </div>
+      {/* Add the confirmation button here */}
+      <button onClick={handleConfirmation} className="confirmation-button">
+        تایید و ادامه خرید
+      </button>
     </div>
   );
 };
