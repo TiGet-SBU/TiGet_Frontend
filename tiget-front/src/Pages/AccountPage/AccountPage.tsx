@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import { sina } from '../../FakeData/fakeData';
 import './AccountPage.css';
 import { UserDataCard } from './UserDataCard';
 import { UserBalanceCard } from './UserBalanceCard';
 import { RightSide } from './RightSide';
+import { UserContext } from '../../Components/UserProvider/UserProvider';
+import Button from '../../Components/Button/Button';
 const AccountPage = () => {
   //page = 0 => user data
   //page = 1 => increase money
@@ -12,14 +14,16 @@ const AccountPage = () => {
   const handlePageChange = (newPage : number) => {
     setPage(newPage);
   }
+  const { userData } = useContext(UserContext);
+
   return (
     <div className='account-holder'>
       <Navbar/>
       <div className='main-flex'>
-        <RightSide account={sina} onClick={handlePageChange}/>
+        <RightSide account={userData} onClick={handlePageChange}/>
         <div className='left-flex'>
           {
-            page === 0 ? (<UserDataCard account={sina}/>) : (<UserBalanceCard account={sina}/>) 
+            page === 0 ? (<UserDataCard account={userData}/>) : (<UserBalanceCard account={userData}/>) 
           }
         </div>
       </div>
