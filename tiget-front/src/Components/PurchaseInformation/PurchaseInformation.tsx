@@ -115,7 +115,7 @@ const PurchaseInformation: React.FC<{
           calendarClassName="datepicker-calendar"
           locale="fa"
         />
-        {removable && <button onClick={onRemove}>حذف کردن</button>}
+        
       </div>
     </div>
   );

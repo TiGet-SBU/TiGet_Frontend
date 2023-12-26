@@ -6,28 +6,27 @@
   background-color: var(--main-color);
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  padding: 60px;
-  width: 1200px;
+  width: 80%;
   margin: 20px auto;
 }
 
 .form-row {
   display: flex;
   align-items: center;
-  margin-bottom: 30px; /* Increased spacing between rows */
+  margin-bottom: 30px;
+  justify-content: center;
 }
 
 .form-input {
-  margin: 10px 15px; /* Adjusted spacing */
-  padding: 12px;
-  line-height: 28px;
-  width: 100%;
-  border: 1px solid #b4c8da;
-  border-radius: 8px;
-  font-size: 18px;
-  font-family: "Vazirmatn", sans-serif;
-  background-color: #fff;
-  color: #333;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-width: 1px;
+  border-color: var(--text-gray-color);
+  border-radius: 5px;
+  height: 40px;
+  font-family: 'Vazirmatn', sans-serif;
+  padding-right:10px ;
+  margin-right: 10px;
 }
 
 .form-input::placeholder {
