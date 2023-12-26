@@ -48,7 +48,7 @@ const LoginPage = () =>
         if (loginType === userType.user)
             setLoginType(userType.company);
         else
-            setLoginType(userType.company);
+            setLoginType(userType.user);
     }
     return (
         <div>
