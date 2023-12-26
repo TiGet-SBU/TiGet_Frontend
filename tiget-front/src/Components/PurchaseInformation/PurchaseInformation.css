@@ -3,7 +3,7 @@
   direction: rtl;
   display: flex;
   flex-direction: column;
-  background-color: #e0e9f5;
+  background-color: var(--main-color);
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   padding: 60px;
@@ -25,12 +25,14 @@
   border: 1px solid #b4c8da;
   border-radius: 8px;
   font-size: 18px;
+  font-family: "Vazirmatn", sans-serif;
   background-color: #fff;
   color: #333;
 }
 
 .form-input::placeholder {
   font-size: 16px;
+  font-family: "Vazirmatn", sans-serif;
   opacity: 0.8;
 }
 
@@ -52,12 +54,13 @@
   border-radius: 8px;
   font-size: 16px;
   font-weight: bold;
+  font-family: "Vazirmatn", sans-serif;
   color: #fff;
-  background-color: #007bff;
+  background-color: var(--main-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .button-group button:hover {
-  background-color: #0056b3;
+  background-color: var(--main-color-hover);
 }
