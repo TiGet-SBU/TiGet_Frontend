@@ -64,6 +64,9 @@
     margin-bottom: 20px;
     color: red;
 }
+.exit:hover{
+    cursor: pointer;
+}
 .data-card-holder{
     width: 50%;
     margin-right: 3%;

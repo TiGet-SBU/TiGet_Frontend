@@ -1,7 +1,14 @@
 import React from 'react';
 import { Account } from '../../FakeData/fakeData';
+import { useContext } from 'react';
+import { UserContext } from '../../Components/UserProvider/UserProvider';
 
 export const RightSide: React.FC<{ account: Account | null; onClick: (newPage: number) => void; }> = ({ account, onClick }) => {
+ 
+  const {logout} = useContext(UserContext);
+  const handleLogout = () => {
+    logout();
+  }
   const handleClick = (page: number) => {
      return () => onClick(page);
   };
@@ -33,7 +40,7 @@ export const RightSide: React.FC<{ account: Account | null; onClick: (newPage: n
           <div className='state-button' onClick={handleClick(1)}>
             افزایش اعتبار
           </div>
-          <div className='exit'>
+          <div className='exit' onClick={handleLogout}>
             خروج از حساب
           </div>
         </div>
