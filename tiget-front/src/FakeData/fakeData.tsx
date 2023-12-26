@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 export type Preview = {
     name: string,
     Vehicle: string, 
@@ -20,6 +21,10 @@ export type Account = {
   phone_number : string,
   balance : number
 }
+
+export type MyComponentProps = {
+  children: ReactNode;
+};
 const img = require("../Resources/destination.jpg");
 export const sina : Account = {first_name : "سینا",
                                last_name : "طاهری بهروز",
