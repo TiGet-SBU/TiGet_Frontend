@@ -22,6 +22,13 @@ export type Account = {
   balance : number
 }
 
+export interface Company extends Account {
+  name : string,
+  address : string,
+  description : string,
+  email : string,
+}
+
 export type MyComponentProps = {
   children: ReactNode;
 };
@@ -33,7 +40,18 @@ export const sina : Account = {first_name : "سینا",
                                email : "sinatb.dev@gmail.com",
                                balance : 54648798,
                                phone_number : "+989999999999"};
-
+export const sag_Company : Company = {
+                                name: "شرکت هواپیمایی سگ",
+                                address: "روستای بهروز",
+                                description: "فرستادن سگ به روستا های مختلف کشور",
+                                email: "sag@email.com",
+                                password: "als;fkaslkf!",
+                                first_name: "",
+                                last_name: "",
+                                birth_date: new Date("2020-2-3"),
+                                phone_number: "",
+                                balance: 0
+                              };
 export const fakePreview: Preview[] = [
    {name: "تهران", Vehicle : "اتوبوس", description : "پایتخت ایران",image : img },
    {name: "تبریز", Vehicle : "قطار", description : "شهر دل انگیز",image : img },
