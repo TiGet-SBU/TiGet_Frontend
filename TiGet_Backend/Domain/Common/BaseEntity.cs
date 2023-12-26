@@ -8,7 +8,7 @@ namespace Domain.Common
 {
     public record BaseEntity
     {
-        public required Guid Id { get; set; }
+        public Guid Id { get; set; }
         public DateTime CreatedDate { get; set; }
     }
 }

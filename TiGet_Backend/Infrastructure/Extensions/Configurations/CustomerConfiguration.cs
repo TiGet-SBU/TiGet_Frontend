@@ -1,10 +1,13 @@
 ﻿using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Infrastructure.Extensions.Configurations;
 
 namespace Infrastructure.Extensions.Configurations
 {
@@ -21,6 +24,8 @@ namespace Infrastructure.Extensions.Configurations
             builder.Property(e => e.PasswordHash)
                 .IsRequired();
 
+            // Ignore BirthDate property
+            builder.Ignore(e => e.BirthDate);
         }
     }
 }
