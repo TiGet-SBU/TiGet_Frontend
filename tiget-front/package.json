@@ -13,6 +13,7 @@
     "@types/react-datepicker": "^4.19.4",
     "@types/react-dom": "^18.2.17",
     "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.6.7",
     "jalali-moment": "^3.3.11",
     "moment-jalaali": "^0.10.0",
     "react": "^18.2.0",

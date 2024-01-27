@@ -8,9 +8,12 @@ import CreateTicket from '../../Components/Ticket/CreateTicket';
 
 const SearchPage = () => {
   return (
-    <>z
+    <>
       <Navbar/>
       <div className='main-body-sp'>
+        <div className='filter-bar-holder-sp'>
+            <FilterBar/>
+        </div>
         <div className='ticket-search-form-holder-sp'>
           <div className='search-form-holder-sp'>
             <SearchForm/>
@@ -20,9 +23,6 @@ const SearchPage = () => {
               fakeTickets.map(ft => <CreateTicket ticket={ft}/>)
             }
           </div>
-        </div>
-        <div className='filter-bar-holder-sp'>
-          <FilterBar/>
         </div>
       </div>
     </>
