@@ -7,11 +7,13 @@
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   width: 80%;
+  height: auto;
   margin: 20px auto;
 }
 
 .form-row {
   display: flex;
+  flex-direction: row;
   align-items: center;
   margin-bottom: 30px;
   justify-content: center;
@@ -84,4 +86,9 @@
 
 .confirmation-button:hover {
   background-color: var(--main-color-hover); /* Change hover color if needed */
+}
+@media only screen and (max-width : 750px) {
+  .form-row{
+    flex-direction: column;
+  }
 }
