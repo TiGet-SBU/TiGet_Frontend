@@ -18,7 +18,7 @@ const Support = () => {
               </select>
             </div>
             <div className='support-form-left'>
-              <input placeholder='شرح مشکل'/>
+              <textarea placeholder='شرح مشکل'/>
               <div className='support-form-button-holder'>
                 <Button text='ثبت مشکل' onClick={()=>true}/>
               </div>

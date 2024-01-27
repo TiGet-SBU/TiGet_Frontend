@@ -1,12 +1,11 @@
 .support-form{
     margin-top: 5%;
     width: 80%;
-    height: 15rem;
     border-radius: 5px;
     border-color: var(--line-color);
     border-style: solid;
     display: flex;
-    direction: row;
+    flex-direction: row;
 }
 .support-form-right input{
     margin-top: 10%;
@@ -31,7 +30,6 @@
 .support-form-right{
     display: flex;
     flex-direction: column;
-    
 }
 .support-form-holder{
     display: flex;
@@ -48,12 +46,21 @@
     display: flex;
     justify-content: center;
     margin-top: 5%;
+    margin-bottom: 1%;
 }
-.support-form-left input{
+.support-form-left textarea{
+    margin-top: 5%;
     border-width: 1px;
     border-color: var(--text-gray-color);
     border-radius: 5px;
     height: 120px;
     font-family: 'Vazirmatn', sans-serif;
     padding-right:10px ;
+}
+@media only screen and (max-width : 600px) {
+    .support-form{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
