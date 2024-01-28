@@ -30,10 +30,3 @@
 .company-input-checkbox div{
     margin-top: 5%;
 }
-.flight-type{
-    color: var(--text-gray-color);
-    margin-right: 10%; 
-}
-.flight-type div{
-    margin-top: 5%;
-}

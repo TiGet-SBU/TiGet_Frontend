@@ -36,11 +36,6 @@ const FilterBar = () => {
         <div className='company-input-checkbox'>
           <CreateCheckbox items={fakeAirLines}/>
         </div>
-        <div className='line'></div>
-        <div className='input-name'>تعداد توقف</div>
-        <div className='flight-type'>
-          <CreateCheckbox items={types}/>
-        </div>
       </form>
     </div>
   )
