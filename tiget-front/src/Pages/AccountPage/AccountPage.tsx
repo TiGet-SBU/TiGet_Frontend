@@ -1,12 +1,10 @@
 import React, {useContext} from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
-import { sina } from '../../FakeData/fakeData';
 import './AccountPage.css';
 import { UserDataCard } from './UserDataCard';
 import { UserBalanceCard } from './UserBalanceCard';
 import { RightSide } from './RightSide';
 import { UserContext } from '../../Components/UserProvider/UserProvider';
-import Button from '../../Components/Button/Button';
 import CompanyTicketAdd from './CompanyTicketAdd';
 const AccountPage = () => {
   //page = 0 => user data

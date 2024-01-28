@@ -1,8 +1,8 @@
 import React from 'react'
-import { Account } from '../../FakeData/fakeData'
+import { Customer,Company } from '../../FakeData/fakeData'
 import Button from '../../Components/Button/Button'
 
-const CompanyTicketAdd : React.FC<{account : Account | null}> = ({account}) => {
+const CompanyTicketAdd : React.FC<{account : Customer | Company | null}> = ({account}) => {
   return (
     <>
       {account === null ? 

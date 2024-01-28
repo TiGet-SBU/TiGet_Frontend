@@ -12,46 +12,30 @@ export type Ticket = {
    vehicle : string,
    price : number
 }
-export type Account = {
-  first_name : string,
-  last_name : string,
-  password : string,
-  birth_date : Date,
+export type User = {
+  role : Role,
   email : string,
-  phone_number : string,
-  balance : number
+  passwordHash : string,
+  phoneNumber : string
 }
-
-export interface Company extends Account {
+export interface Company extends User {
   name : string,
   address : string,
   description : string,
-  email : string,
+}
+
+export interface Customer extends User{
+  firstName : string,
+  lastName : string,
+  birthDate : Date,
+  gender : Gender,
+  balance : number
 }
 
 export type MyComponentProps = {
   children: ReactNode;
 };
 const img = require("../Resources/destination.jpg");
-export const sina : Account = {first_name : "سینا",
-                               last_name : "طاهری بهروز",
-                               password : "123456",
-                               birth_date : new Date("2019-4-5"),
-                               email : "sinatb.dev@gmail.com",
-                               balance : 54648798,
-                               phone_number : "+989999999999"};
-export const sag_Company : Company = {
-                                name: "شرکت هواپیمایی سگ",
-                                address: "روستای بهروز",
-                                description: "فرستادن سگ به روستا های مختلف کشور",
-                                email: "sag@email.com",
-                                password: "als;fkaslkf!",
-                                first_name: "",
-                                last_name: "",
-                                birth_date: new Date("2020-2-3"),
-                                phone_number: "",
-                                balance: 0
-                              };
 export const fakePreview: Preview[] = [
    {name: "تهران", Vehicle : "اتوبوس", description : "پایتخت ایران",image : img },
    {name: "تبریز", Vehicle : "قطار", description : "شهر دل انگیز",image : img },
@@ -78,7 +62,12 @@ export const fakePreview: Preview[] = [
    "بیشتر از 2",
    "همه"
  ];
- export enum userType{
-  user,
-  company
+ export enum Gender{
+  Male,
+  Female
+ }
+ export enum Role{
+  Admin,
+  Company,
+  User
  }

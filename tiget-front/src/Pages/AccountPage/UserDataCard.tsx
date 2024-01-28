@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Account } from '../../FakeData/fakeData';
+import { Customer, Company } from '../../FakeData/fakeData';
 import Button from '../../Components/Button/Button';
 
-export const UserDataCard: React.FC<{ account: Account | null; }> = ({ account }) => {
+export const UserDataCard: React.FC<{ account: Customer | Company | null; }> = ({ account }) => {
   
-  const [name, setName] = useState(account === null ? "" : account.first_name);
-  const [lastName, setLastName] = useState(account === null ? "" : account.last_name);
+  const [name, setName] = useState(account === null ? "" : (account as Customer).firstName);
+  const [lastName, setLastName] = useState(account === null ? "" : (account as Customer).lastName);
   const [email, setEmail] = useState(account === null ? "" : account.email);
-  const [phoneNumber, setPhoneNumber] = useState(account === null ? "" : account.phone_number);
+  const [phoneNumber, setPhoneNumber] = useState(account === null ? "" : account.phoneNumber);
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
