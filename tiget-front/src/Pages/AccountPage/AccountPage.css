@@ -11,6 +11,7 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 .left-flex{
     width: 70%;
 }
@@ -84,6 +85,7 @@
 .data-card-form{
     margin-top: 5%;
     display: flex;
+    justify-content: space-evenly;
 }
 .account-acceptance-button{
     margin-right: 45%;
@@ -144,4 +146,26 @@
 }
 .ticket-add{
     margin-bottom: 3%;
+}
+@media only screen and (max-width : 600px) 
+{
+    .main-flex{
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+    }    
+    .right-side{
+        margin-bottom: 3rem;
+        width: 80%;
+    }
+}
+@media only screen and (max-width : 1050px)
+{
+    .data-card-holder{
+        width: auto;
+    }
+    .data-card-form{
+        flex-direction: column;
+        align-items: center;
+    }
 }
