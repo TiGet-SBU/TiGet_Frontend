@@ -1,11 +1,14 @@
-import React, { useState } from "react";
-import { Customer, Company, Role } from "../../FakeData/fakeData";
+import React, { useContext, useState } from "react";
+import { Customer, Company, Role, User } from "../../FakeData/fakeData";
 import Button from "../../Components/Button/Button";
 import axios from "axios";
+import { UserContext } from "../../Components/UserProvider/UserProvider";
 
 export const UserDataCard: React.FC<{ account: Customer | Company | null }> = ({
   account,
 }) => {
+  const { updateUserData, userData } = useContext(UserContext);
+
   const [name, setName] = useState(
     account === null ? "" : (account as Customer).firstName
   );
@@ -30,16 +33,41 @@ export const UserDataCard: React.FC<{ account: Customer | Company | null }> = ({
   };
 
   const handleChange = () => {
-    axios
-      .put("http://localhost:5120/api/customer/update", {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    if (account?.role === Role.User) {
+      const customerPayload = {
+        ...(userData as Customer),
         email: email,
         phoneNumber: phoneNumber,
         firstName: name,
         lastName: lastName,
-      })
-      .then(() => console.log("change done"))
-      .catch();
+      };
+      axios
+        .put(`http://localhost:5120/api/customer/update`, {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+          email: email,
+          phoneNumber: phoneNumber,
+          firstName: name,
+          lastName: lastName,
+        })
+        .then(() => updateUserData(customerPayload))
+        .catch();
+    } else if (account?.role === Role.Company) {
+      const CompanyPayload = {
+        ...(userData as Company),
+        email: email,
+        phoneNumber: phoneNumber,
+        name: name,
+      };
+      axios
+        .put(`http://localhost:5120/api/company/update`, {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+          email: email,
+          phoneNumber: phoneNumber,
+          name: name,
+        })
+        .then(() => updateUserData(CompanyPayload))
+        .catch();
+    }
   };
   return (
     <>

@@ -16,7 +16,7 @@ export const Login: React.FC<{
 
   const handleLogin = () => {
     axios
-      .post("http://localhost:5120/api/customer/login", {
+      .post("http://localhost:5120/api/Auth/login", {
         email: email,
         password: password,
       })

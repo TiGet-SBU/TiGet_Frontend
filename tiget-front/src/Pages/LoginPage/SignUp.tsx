@@ -18,7 +18,7 @@ export const SignUp: React.FC<{
   const handleSignUp = () => {
     if (password === secPassword) {
       axios
-        .post("http://localhost:5120/api/customer/singup", {
+        .post("http://localhost:5120/api/Auth/singup", {
           email: email,
           password: password,
           passwordRepeat: secPassword,

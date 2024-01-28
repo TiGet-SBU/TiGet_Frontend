@@ -6,6 +6,7 @@ interface UserContextType {
   isLoggedIn: boolean;
   type : Role;
   userData: Customer | Company | null;
+  updateUserData :  (user: Customer | Company | null) => void;
   login: (user: Customer | Company | null, type: Role) => void;
   logout: () => void;
 }
@@ -14,6 +15,7 @@ export const UserContext = createContext<UserContextType>({
   isLoggedIn: false,
   type: Role.User,
   userData: null,
+  updateUserData : ()=>{},
   login: () => {},
   logout: () => {},
 });
@@ -23,6 +25,9 @@ const UserProvider: React.FC<MyComponentProps> = ({ children }) => {
   const [userData, setUserData] = useState<Customer | Company | null>(null);
   const [type,setType] = useState(Role.User);
 
+  const updateUserData = (user: Customer | Company | null) => {
+    setUserData(user);
+  }
   const login = (user: Customer | Company | null, type : Role) => {
     setIsLoggedIn(true);
     setType(type);
@@ -35,7 +40,7 @@ const UserProvider: React.FC<MyComponentProps> = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ isLoggedIn, type ,userData, login, logout }}>
+    <UserContext.Provider value={{ isLoggedIn, type ,userData, updateUserData, login, logout }}>
       {children}
     </UserContext.Provider>
   );
