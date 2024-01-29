@@ -1,7 +1,6 @@
 import React from 'react';
 import './FilterBar.css';
 import { fakeAirLines } from '../../FakeData/fakeData';
-import { types } from '../../FakeData/fakeData';
 const CreateCheckbox : React.FC<{ items: string[] }> = ({items}) => {
   const ret = items.map( it => <div>
     <input type='checkbox' id={it}/>

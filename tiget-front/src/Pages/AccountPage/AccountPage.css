@@ -168,4 +168,9 @@
         flex-direction: column;
         align-items: center;
     }
+    .ticket-info-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

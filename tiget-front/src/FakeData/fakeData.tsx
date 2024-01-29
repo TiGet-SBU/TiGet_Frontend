@@ -18,12 +18,19 @@ export type User = {
   passwordHash : string,
   phoneNumber : string
 }
+export type Station = {
+  id : string,
+  cityId : string,
+  name : string,
+  createdDate : Date,
+  address : string,
+  vehicleType : VehicleType
+}
 export interface Company extends User {
   name : string,
   address : string,
   description : string,
 }
-
 export interface Customer extends User{
   firstName : string,
   lastName : string,
@@ -31,7 +38,6 @@ export interface Customer extends User{
   gender : Gender,
   balance : number
 }
-
 export type MyComponentProps = {
   children: ReactNode;
 };
@@ -55,13 +61,6 @@ export const fakePreview: Preview[] = [
    "Qatar Airlines",
    "United Airlines"
  ];
- export const types: string[] = [
-   "مستقیم",
-   "یک",
-   "دو",
-   "بیشتر از 2",
-   "همه"
- ];
  export enum Gender{
   Male,
   Female
@@ -70,4 +69,9 @@ export const fakePreview: Preview[] = [
   Admin,
   Company,
   User
+ }
+ export enum VehicleType{
+  Bus,
+  Train, 
+  Airplane
  }
